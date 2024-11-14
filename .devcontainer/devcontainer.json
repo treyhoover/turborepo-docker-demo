@@ -1,0 +1,29 @@
+{
+	"name": "Turborepo Development",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig",
+				"Gruntfuggly.todo-tree",
+				"YoavBls.pretty-ts-errors",
+				"biomejs.biome",
+				"bradlc.vscode-tailwindcss",
+				"naumovs.color-highlight",
+				"waderyan.gitblame",
+				"Cardinal90.multi-cursor-case-preserve",
+				"streetsidesoftware.code-spell-checker",
+				"kingwl.vscode-vitest-runner"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } }
+			}
+		}
+	},
+	"forwardPorts": [3000, 3001],
+	"postAttachCommand": "pnpm exec turbo dev",
+	"remoteUser": "node"
+}
